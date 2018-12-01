@@ -9,8 +9,7 @@ def interessante_getallen(a, b, c):
             if sum(numbers) % kleinste_deelbaar == 0:
                 if sum(numbers) % c == 0:
                     if count % c == 0:
-                        final_number = count
-                        return str(kleinste_deelbaar) + "\n" + str(final_number)
+                        return str(kleinste_deelbaar) + "\n" + str(count)
         count += 1
     return 0
 
