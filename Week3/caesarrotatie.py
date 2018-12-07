@@ -8,10 +8,13 @@ def caesarrotatie(n, txt):
             encrypted += encrypt(l)
     return encrypted
 
-
+# encryption gebeurt hier
 def encrypt(letter):
+    # alphabet in capital en lowercase
+    # de for loop looped door de ascii tabel en vult de waardes
     uppercase_alphabet = [chr(i) for i in range(65, 90)]
     lowercase_alphabet = [chr(x) for x in range(97, 122)]
+    # als letter is uppercase loop in uppercase array
     if letter.isupper():
         if letter in uppercase_alphabet:
             # index of current letter in uppercase alphabet

@@ -1,6 +1,6 @@
 def dubbels(numbers):
-    if type(numbers[0]) is not int:
-        return list(set([i for i in numbers if numbers.count(i) > 1]))
+    # geef een list terug die een set (unique nummers) waar de count > 1 in de lijst
+    # set heeft alleen unique waardes
     return list(set([x for x in numbers if numbers.count(x) > 1]))
 
 
