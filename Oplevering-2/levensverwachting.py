@@ -2,8 +2,6 @@ def levensverwachting(geslacht, roker, sport, alcohol, fastfood):
     leeftijd = 70
     if geslacht == 'vrouw':
         leeftijd += 4
-    elif geslacht == 'man':
-        leeftijd -= 2
     if roker is True:
         leeftijd -= 5
     else:
@@ -14,7 +12,7 @@ def levensverwachting(geslacht, roker, sport, alcohol, fastfood):
         leeftijd += sport
     if alcohol > 7:
         leeftijd -= (alcohol-7)*0.5
-    else:
+    elif alcohol == 0:
         leeftijd += 2
     if fastfood is False:
         leeftijd += 3
