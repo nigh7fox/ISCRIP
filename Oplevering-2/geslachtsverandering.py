@@ -16,14 +16,14 @@ def vertaal(word, vertaling):
     return new_word
 
 
-def geslachtsveranderingen(zin, vertaling):
+def geslachtsverandering(zin, vertaling):
     new_zin = []
     for k, v in vertalingen.items():
         for word in zin:
             if word == k:
-                new_zin.apppend(v.capitilize())
+                new_zin.apppend(v.capitalize())
             else:
-                new_zin.append(k.capitilize())
+                new_zin.append(k.capitalize())
             if word == v:
                 new_zin.append(k)
             else:
@@ -36,9 +36,9 @@ def geslachtsherstel(zin, vertaling):
     for k, v in vertalingen.items():
         for word in zin:
             if word == k:
-                new_zin.apppend(k.capitilize())
+                new_zin.apppend(k.capitalize())
             else:
-                new_zin.append(v.capitilize())
+                new_zin.append(v.capitalize())
             if word == v:
                 new_zin.append(v)
             else:

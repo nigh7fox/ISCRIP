@@ -1,4 +1,6 @@
 from collections import Counter, OrderedDict
+
+
 def scoresToevoegen(current_bord, new_bord):
     updated_bord = dict(Counter(current_bord)+Counter(new_bord))
     return updated_bord
@@ -8,7 +10,7 @@ def scoresTonen(current_bord, top=0):
     sorted_dict = OrderedDict(sorted(current_bord.items(), key=lambda x: x[1]))
     if top is 0:
         return list(sorted_dict.items())[::-1]
-    return list(sorted_dict.items())[len(sorted_dict)-top:len(sorted_dict)]
+    return list(sorted_dict.items())[len(sorted_dict):len(sorted_dict)-1-top:-1]
 
 
 if __name__ == "__main__":
