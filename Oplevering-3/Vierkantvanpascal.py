@@ -1,11 +1,4 @@
-import numpy as np
-
-
-def paden():
-    return 0
-
-
-def vierkant(cells, n=1):
+def vierkant(cells, n=1) -> [[]]:
     answer = []
     curr_cells = []
     #   add first row
@@ -27,7 +20,7 @@ def vierkant(cells, n=1):
     return answer
 
 
-def paden(rijen, n=1):
+def paden(rijen, n=1) -> str:
     vierkanten = vierkant(rijen, n)
     antwoord = ""
     last_row = vierkanten[rijen - 1]
