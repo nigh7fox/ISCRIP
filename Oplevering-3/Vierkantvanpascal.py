@@ -21,14 +21,20 @@ def vierkant(cells, n=1) -> [[]]:
 
 
 def paden(rijen, n=1) -> str:
+    #   we hebben een methode al gemaakt om vierkant van pascal te berekenen
     vierkanten = vierkant(rijen, n)
     antwoord = ""
+    #   pak de laatste row in de lijst
     last_row = vierkanten[rijen - 1]
+    #   pak laatste cijfer van dat lijst
     last_number_width = len(str(last_row[rijen-1])) + 1
     for rij in vierkanten:
         for i, cijfers in enumerate(rij):
+            #   gebruik .format samen met align en width om de cijfers mooi
+            #   onder elkaar te plaatsen aan de hand van de laatste cijfer
             antwoord += '{:{align}{width}}'.format(str(cijfers), align='>', width=last_number_width)
             if i == len(rij)-1:
+                #   voeg een enter toe aan bij het laatste cijfer
                 antwoord += "\n"
     return antwoord
 
