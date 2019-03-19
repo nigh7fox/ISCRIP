@@ -50,7 +50,18 @@ def alfabetisch(woord) -> bool:
 
 
 def score(sleutel, bestand) -> int:
-    return 0
+    count = 0
+    #   lees bestand
+    with open(bestand) as file:
+        woorden = [x.replace("\n","") for x in file.readlines()]
+    #   voor alle woorden in bestand
+    for woord in woorden:
+        #   codeer woord
+        gecodeerde_woord = codeer(woord, sleutel)
+        #   als gecodeerde woord alfabetisch is doe + 1
+        if alfabetisch(gecodeerde_woord):
+            count += 1
+    return count
 
 
 if __name__ == "__main__":
